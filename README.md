@@ -9,7 +9,16 @@ icon, and app entry so you don't need to keep a browser tab open for it.
 
 ## Install
 
-Download the `.deb` from [Releases](https://github.com/carloscn/netease_music/releases)
+From the mltz apt repository (Ubuntu 26.04 `resolute`; use `noble` on 24.04):
+
+```bash
+sudo curl -fsSL https://apt.mltz.tech/key.gpg -o /usr/share/keyrings/mltz.gpg
+echo "deb [signed-by=/usr/share/keyrings/mltz.gpg] https://apt.mltz.tech resolute main" | sudo tee /etc/apt/sources.list.d/mltz.list
+sudo apt-get update
+sudo apt-get install netease-music-player
+```
+
+Or download the `.deb` from [Releases](https://github.com/carloscn/netease_music/releases)
 and install:
 
 ```bash

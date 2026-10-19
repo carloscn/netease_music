@@ -34,5 +34,6 @@
     "deb": {
       "priority": "optional"
     }
-  }
+  },
+  "homepage": "https://github.com/carloscn/netease_music"
 }
