@@ -45,6 +45,13 @@ npm start        # run the app directly
 npm run dist      # build dist/netease-music-player_<version>_amd64.deb
 ```
 
+## Releasing
+
+Publishing a GitHub Release with a `vX.Y.Z` tag runs `.github/workflows/release.yml`:
+it builds the `.deb` from that tag, attaches it to the release, and publishes it to
+apt.mltz.tech (`resolute` and `noble`). Each release needs a new version; 1.0.0 is
+already in the apt repo.
+
 ## Notes
 
 - External links (login redirects, help pages, etc.) that leave the `music.163.com`
