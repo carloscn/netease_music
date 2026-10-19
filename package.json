@@ -8,7 +8,7 @@
   "private": true,
   "scripts": {
     "start": "electron .",
-    "dist": "electron-builder --linux deb"
+    "dist": "electron-builder --linux deb --publish never"
   },
   "devDependencies": {
     "electron": "^43.4.0",
