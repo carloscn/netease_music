@@ -56,5 +56,7 @@ already in the apt repo.
 
 - External links (login redirects, help pages, etc.) that leave the `music.163.com`
   domain open in your system's default browser instead of inside the app window.
-- The app icon is an original generic music-note icon, not NetEase's trademarked logo.
+- The app icon is an original cloud-and-music-note design, not NetEase's trademarked logo.
+- Closing the window keeps the app (and playback) running in the system tray; reopen it
+  from the tray icon or the app menu. Quit from the tray menu or with `Ctrl+Q`.
 - This project is unofficial and not affiliated with NetEase.
