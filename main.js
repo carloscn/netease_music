@@ -150,6 +150,13 @@ function createWindow() {
       event.preventDefault();
       if (tray) win.hide();
       else win.close();
+    } else if (key === '=' || key === '+' || key === '-' || key === '_' || key === '0') {
+      // The default menu's zoom-in accelerator is Ctrl+Plus (needs Shift), so
+      // plain Ctrl+= does nothing; handle all zoom keys ourselves.
+      event.preventDefault();
+      const wc = win.webContents;
+      if (key === '0') wc.setZoomLevel(0);
+      else wc.setZoomLevel(Math.max(-5, Math.min(5, wc.getZoomLevel() + (key === '-' || key === '_' ? -0.5 : 0.5))));
     }
   });
 
