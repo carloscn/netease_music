@@ -1,17 +1,17 @@
 {
   "name": "netease-music-player",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Standalone desktop wrapper for the NetEase Cloud Music web player (music.163.com/st/webplayer)",
   "main": "main.js",
   "author": "carloscn <carlos.wei.hk@gmail.com>",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "electron .",
+    "start": "electron . --ozone-platform=x11 --disable-vulkan",
     "dist": "electron-builder --linux deb --publish never"
   },
   "devDependencies": {
-    "electron": "^43.4.0",
+    "electron": "^44.9.0",
     "electron-builder": "^26.15.3"
   },
   "build": {
@@ -19,7 +19,9 @@
     "productName": "NetEase Music Player",
     "files": [
       "main.js",
-      "package.json"
+      "package.json",
+      "build/tray.png",
+      "build/icon.png"
     ],
     "linux": {
       "target": [
@@ -28,6 +30,10 @@
       "category": "AudioVideo",
       "icon": "build/icon.png",
       "executableName": "netease-music-player",
+      "executableArgs": [
+        "--ozone-platform=x11",
+        "--disable-vulkan"
+      ],
       "synopsis": "Standalone desktop player for the NetEase Cloud Music webplayer",
       "description": "A lightweight Electron wrapper around NetEase Cloud Music's official web player (music.163.com/st/webplayer), packaged as a native Linux desktop app installable via dpkg.",
       "syncDesktopName": true
