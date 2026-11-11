@@ -1,6 +1,6 @@
 {
   "name": "netease-music-player",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Standalone desktop wrapper for the NetEase Cloud Music web player (music.163.com/st/webplayer)",
   "main": "main.js",
   "author": "carloscn <carlos.wei.hk@gmail.com>",
